@@ -87,9 +87,9 @@ echo To start the development server:
 echo   1. Activate virtual environment: venv\Scripts\activate
 echo   2. Run server: python manage.py runserver
 echo.
-echo API will be available at: http://localhost:8000
-echo Admin panel: http://localhost:8000/admin
-echo API Documentation: http://localhost:8000/swagger/
+echo API will be available at: https://konsiliumapi.aiproduct.uz
+echo Admin panel: https://konsiliumapi.aiproduct.uz/admin
+echo API Documentation: https://konsiliumapi.aiproduct.uz/swagger/
 echo.
 
 pause

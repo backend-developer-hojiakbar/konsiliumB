@@ -73,7 +73,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-The API will be available at `http://localhost:8000`
+The API will be available at `https://konsiliumapi.aiproduct.uz`
 
 ## API Endpoints
 
@@ -121,8 +121,8 @@ The API will be available at `http://localhost:8000`
 
 Interactive API documentation is available at:
 
-- **Swagger UI**: http://localhost:8000/swagger/
-- **ReDoc**: http://localhost:8000/redoc/
+- **Swagger UI**: https://konsiliumapi.aiproduct.uz/swagger/
+- **ReDoc**: https://konsiliumapi.aiproduct.uz/redoc/
 
 ## Environment Variables
 
@@ -151,7 +151,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 USE_SQLITE=False
 
 # CSRF
-CSRF_TRUSTED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://konsilium.cdcgroup.uz,https://konsilium.cdcgroup.uz
+CSRF_TRUSTED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,https://konsilium.aiproduct.uz,http://konsilium.aiproduct.uz,https://konsiliumapi.aiproduct.uz,http://konsiliumapi.aiproduct.uz
 ```
 
 ## Database Schema

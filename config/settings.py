@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-default-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='konsiliumapi.aiproduct.uz,167.99.137.171,localhost,127.0.0.1').split(',')
 
 
 # Database switch (use SQLite for quick local dev when set)
@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 # CSRF
 CSRF_TRUSTED_ORIGINS = config(
     'CSRF_TRUSTED_ORIGINS',
-    default='http://localhost:5173,http://127.0.0.1:5173,http://konsilium.cdcgroup.uz,https://konsilium.cdcgroup.uz,http://konsiliumapi.cdcgroup.uz,https://konsiliumapi.cdcgroup.uz'
+    default='http://localhost:5173,http://127.0.0.1:5173,https://konsilium.aiproduct.uz,http://konsilium.aiproduct.uz,https://konsiliumapi.aiproduct.uz,http://konsiliumapi.aiproduct.uz'
 ).split(',')
 
 MIDDLEWARE = [
@@ -94,25 +94,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# Database
-if USE_SQLITE:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': config('DB_NAME', default='konsilium_db'),
-            'USER': config('DB_USER', default='postgres'),
-            'PASSWORD': config('DB_PASSWORD', default='postgres'),
-            'HOST': config('DB_HOST', default='localhost'),
-            'PORT': config('DB_PORT', default='5432'),
-        }
-    }
+}
+
 
 
 # Password validation
@@ -208,7 +197,7 @@ SIMPLE_JWT = {
 
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = DEBUG
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173,http://konsilium.cdcgroup.uz,https://konsilium.cdcgroup.uz').split(',')
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='https://konsilium.aiproduct.uz,http://konsilium.aiproduct.uz,http://localhost:5173,http://127.0.0.1:5173').split(',')
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
     'accept',
